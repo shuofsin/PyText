@@ -32,9 +32,11 @@ def openFile():
 
 root = Tk() 
 root.title("Text Editor")
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
 root.minsize(width=400, height=400)
-root.maxsize(width=400, height=400)
-
+root.maxsize(width=screen_width, height=screen_height)
+root.geometry("800x600")
 text = Text(root, width=400, height=400)
 text.pack()
 
